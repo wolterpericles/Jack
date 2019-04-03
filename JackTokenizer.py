@@ -70,7 +70,7 @@ class JackTokenizer():
     def getToken(self):
         token = self.lista_tokens[self.tokenCorrente]
         if(self.tokenType() == "stringConst"):
-            token = token.replace('"','')
+            token = token[1:len(token)-1]
         return token
 
 tknz = JackTokenizer('Main.jack')
