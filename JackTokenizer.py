@@ -10,7 +10,7 @@ symbols = ['\{', '\}', '\(', '\)', '\[', '\]', '\.', '\,', '\;', '\+', '\-',
 
 intconst = r'[0-9]+'
 stringconst = r'\".*\"'
-identifier = r'[a-zA-Z]+'
+identifier = r'[a-zA-Z][a-zA-Z0-9_]*'
 
 tokens_combinados = "(%s|%s|%s|%s|%s)" %("|".join(keywords),"|".join(symbols),intconst,stringconst,identifier)
 
@@ -72,12 +72,3 @@ class JackTokenizer():
         if(self.tokenType() == "stringConst"):
             token = token[1:len(token)-1]
         return token
-
-tknz = JackTokenizer('Main.jack')
-tknz.advance()
-print("<tokens>")
-while(tknz.hasMoreTokens()):
-    classeToken = tknz.tokenType()
-    print("<%s>%s</%s>" %(classeToken,tknz.getToken(),classeToken))
-    tknz.advance()
-print("</tokens>")
