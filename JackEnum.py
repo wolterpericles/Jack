@@ -1,3 +1,5 @@
+# Enumerações
+
 from enum import Enum
 
 class Token(Enum):
