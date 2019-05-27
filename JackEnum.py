@@ -1,4 +1,4 @@
-# Enumerações
+# Enumerações de token e keyword
 
 from enum import Enum
 
