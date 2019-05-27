@@ -1,3 +1,5 @@
+# Teste de JackTokenizer
+
 from JackTokenizer import JackTokenizer
 
 tknz = JackTokenizer('Main.jack')
